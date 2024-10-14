@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+#img{
+	position: absolute;
+	background-image: url("first.png");
+	width: 200px;
+	height: 200px;
+	margin: -100px 0 0 -100px; 
+	left: 50%;
+	top: 50%;
+}
+</style>
+</head>
+<body>
+<img id = "img"> </img>
+<script>
+var i = 1;
+function qwe(){
+	console.log("1");
+	if(i == 1){
+		document.getElementById('img').style.backgroundImage = "url(first.png)";
+		i++;
+		console.log("2");
+	}else{
+		if(i == 2){
+			document.getElementById('img').style.backgroundImage = "url(second.png)";
+			i++;
+			console.log("3");
+		}else{
+		if(i == 3){
+			document.getElementById('img').style.backgroundImage = "url(third.png)";
+			i = 1;
+			console.log("4");
+		}
+	}
+	}
+}
+setInterval(qwe, 500);
+</script>
+</body>
+</html>
